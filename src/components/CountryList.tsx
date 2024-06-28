@@ -43,7 +43,7 @@ const CountryList: React.FC = () => {
     <Container>
       <CountryBox>
         <BoxHeader>Favorite Countries</BoxHeader>
-        <Card>
+        <CardList>
           {selectedCountries.map((country: Country) => {
             return (
               <CountryCard
@@ -53,11 +53,11 @@ const CountryList: React.FC = () => {
               />
             );
           })}
-        </Card>
+        </CardList>
       </CountryBox>
       <CountryBox>
         <BoxHeader>Countries</BoxHeader>
-        <Card>
+        <CardList>
           {countries.map((country: Country) => {
             return (
               <CountryCard
@@ -67,7 +67,7 @@ const CountryList: React.FC = () => {
               />
             );
           })}
-        </Card>
+        </CardList>
       </CountryBox>
     </Container>
   );
@@ -96,7 +96,7 @@ const BoxHeader = styled.h1`
   text-align: center;
 `;
 
-const Card = styled.div`
+const CardList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
